@@ -4,5 +4,5 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-outputs
-files
+outputs/*
+files/*

@@ -16,7 +16,7 @@ data "archive_file" "init" {
 resource "aws_iam_role_policy" "lambda_policy" {
   name   = "lambda_policy"
   role   = aws_iam_role.lambda_role.id
-  policy = file("${var.path_to_roles}/lambda-policy.json")
+  policy = file("${var.path_to_roles}/lambda-policy.json") # at times ./ fails to read
 }
 
 resource "aws_iam_role" "lambda_role" {
